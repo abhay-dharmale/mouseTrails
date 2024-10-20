@@ -33,13 +33,14 @@ document.addEventListener("mousemove", (e) => {
     gsap.fromTo(
       img,
       {
-        scale: 0.3,
+        scale: 0.2,
         duration: 0.7,
-        ease: "expo.inOut",
+        ease: "power3.inOut",
       },
       {
-        scale: 0.7,
+        scale: 0.4,
         duration: 0.7,
+        // ease: "power3.inOut",
       }
     );
 
@@ -48,12 +49,12 @@ document.addEventListener("mousemove", (e) => {
         opacity: 0,
         duration: 0.5,
         y: 600,
-        ease: "expo.inOut",
+        ease: "power3.inOut",
         onComplete: () => {
           img.remove();
         },
       });
-    }, 800);
+    }, 500);
     lastX = e.pageX;
     lastY = e.pageY;
   }
